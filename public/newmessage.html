@@ -20,14 +20,14 @@
         </ul>
     </div>
     <div class="message-form">
-        <form action="">
+        <form method="POST" action="/newmessage">
             <label for="uname">Username</label><br>
-            <input type="text" id="uname" name="uname" value=""><br>
+            <input type="text" id="uname" name="uname" required><br>
             <label for="country">Country</label><br>
-            <input type="text" id="country" name="country" value=""><br>
+            <input type="text" id="country" name="country" required><br>
             <label for="message">Message</label><br>
-            <textarea id="message" name="message" value=""></textarea><br><br>
-            <input type="submit" value="Submit"> 
+            <textarea id="message" name="message" required></textarea><br><br>
+            <input type="submit" id="button" value="Submit"> 
         </form>
     </div>    
 </body>
