@@ -1,0 +1,124 @@
+body {
+    background-color: #DED2C6;
+    font-family: 'Shrikhand', cursive;
+}
+
+h1 {
+    color: #E6793B;
+    font-size: 64px;
+    text-align: center;
+    padding-top: 70px;
+    margin: 0;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #E6793B;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+li {
+    display: inline;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #EB80D5;
+}
+
+.content {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.guestbook, .message-form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    padding: 20px;
+    border: 2px solid #1E1E1E;
+    border-radius: 40px;
+    width: 60%;
+}
+
+table {
+ border-collapse: collapse;
+ width: 100%;
+ color: #1E1E1E;
+}
+
+th {
+    text-align: start;
+    font-weight: normal;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+td {
+    border-top: 1px solid #1E1E1E;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Chivo', sans-serif;
+    font-size: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+
+input[type=text], textarea  {
+    width: 90%;
+    background-color: #FFFAF5;
+    resize: none;
+    padding: 15px 20px;
+    margin: 15px 0px;  
+}
+
+label {
+    display: inline-block;
+    width: 93%;
+    text-align: start;
+    font-size: 18px;
+}
+
+
+input, textarea {
+    border-radius: 15px;
+    border: none;
+    font-family: 'Chivo', sans-serif;
+    color: #1E1E1E;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type=submit] {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    background-image: linear-gradient(#EB80D5, #E6793B);
+}
+
+@media screen and (min-width: 1500px) {
+    .guestbook, .message-form {
+        width: 900px;
+    }
+}
+
+
+

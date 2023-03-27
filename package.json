@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "name": "guestbook-app",
+  "description": "An app which will allow users to add messages to a public guestbook page",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oonuliina/guestbook-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oonuliina/guestbook-app/issues"
+  },
+  "homepage": "https://github.com/Oonuliina/guestbook-app#readme"
+}
