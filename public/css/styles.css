@@ -92,8 +92,7 @@ label {
     font-size: 18px;
 }
 
-
-input, textarea {
+input, textarea, button {
     border-radius: 15px;
     border: none;
     font-family: 'Chivo', sans-serif;
@@ -105,7 +104,7 @@ textarea {
     height: 150px;
 }
 
-input[type=submit] {
+input[type=submit], button {
     width: 200px;
     height: 50px;
     line-height: 50px;
@@ -114,8 +113,15 @@ input[type=submit] {
     background-image: linear-gradient(#EB80D5, #E6793B);
 }
 
+#ajaxmes {
+    width: 60%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (min-width: 1500px) {
-    .guestbook, .message-form {
+    .guestbook, .message-form, #ajaxmes {
         width: 900px;
     }
 }

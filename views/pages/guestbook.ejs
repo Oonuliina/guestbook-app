@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <%- include ('../partials/header.ejs') %>  
+    </header>
+    <div class="navbar">
+        <ul>
+            <li><a href="guestbook" style="text-decoration: underline">Guestbook</a></li>
+            <li><a href="newmessage">New Message</a></li>
+            <li><a href="ajaxmessage">Ajax Message</a></li>
+        </ul>
+    </div>
+    <div class="guestbook">
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Country</th>
+                <th>Message</th>
+             </tr>
+            <%
+            for (var i=0; i < messages.length; i++){
+                %>
+                    <tr>
+                        <td><%= messages[i].username %></td>
+                        <td><%= messages[i].country %></td>
+                        <td><%= messages[i].message %></td>
+                    </tr>
+                <%
+            }
+            %> 
+        </table>
+    </div>
+</body>
+</html>
