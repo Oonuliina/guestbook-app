@@ -53,19 +53,20 @@ app.get('/ajaxmessage', (req, res) => {
     res.render('pages/ajaxmessage')
 })
 
+var results = '<table>'+
+    '<tr>'+
+    '<th>Username</th>'+
+    '<th>Country</th>'+
+    '<th>Message</th>'+
+    '</tr>';
+
 // lähetetään ajaxmessage-sivulta saatu syöte
 app.post('/ajaxmessage', (req, res) => {
     var username = req.body.uname
     var country = req.body.country
     var message = req.body.message
-
-    var results = '<table>'+
-    '<tr>'+
-    '<th>Username</th>'+
-    '<th>Country</th>'+
-    '<th>Message</th>'+
-    '</tr>'+
-    '<tr>'+
+    
+    results+='<tr>'+
     '<td>'+username+'</td>'+
     '<td>'+country+'</td>'+
     '<td>'+message+'</td>'+
