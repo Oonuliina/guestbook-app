@@ -61,13 +61,16 @@ th {
     font-weight: normal;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-right: 20px;
     font-size: 20px;
+    
 }
 
 td {
     border-top: 1px solid #1E1E1E;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-right: 20px;
     font-family: 'Chivo', sans-serif;
     font-size: 20px;
 }
@@ -111,6 +114,8 @@ input[type=submit], button {
     font-family: 'Shrikhand', cursive;
     font-size: 20px;
     background-image: linear-gradient(#EB80D5, #E6793B);
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 #ajaxmes {
@@ -119,6 +124,10 @@ input[type=submit], button {
     margin-left: auto;
     margin-right: auto;
 }
+  
+button:hover {
+    background-image: linear-gradient(#ec61d0, #e16e2c);
+  }
 
 @media screen and (min-width: 1500px) {
     .guestbook, .message-form, #ajaxmes {

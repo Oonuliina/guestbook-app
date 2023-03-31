@@ -18,28 +18,40 @@
     <div class="message-form">
         <form method="POST" action="/ajaxmessage">
             <label for="uname">Username</label><br>
-            <input type="text" id="uname" name="uname" value=""><br>
+            <input type="text" id="uname" class="inputfield" name="uname"><br>
             <label for="country">Country</label><br>
-            <input type="text" id="country" name="country" value=""><br>
+            <input type="text" id="country" class="inputfield" name="country"><br>
             <label for="message">Message</label><br>
-            <textarea id="message" name="message" value=""></textarea><br><br>
+            <textarea id="message" class="inputfield" name="message"></textarea><br><br>
             <button type="button" name="button" id="button">Submit</button>
         </form>
     </div>
+    <!-- tänne tulee näkyville kenttään täytetyt tiedot-->
     <div id="ajaxmes"></div>
 
 <script>
-  // varmistetaan, että sivu on latautunut
+  // ajax-pyynnön lähetys JQueryllä
+  // ensin varmistetaan, että sivu on latautunut
       $(() => {
+        // kuunnellaan sivulla olevaa nappia
         $("#button").click(() => {
-          var data = {
+          // poimitaan kenttien arvot data muuttujaan
+          const data = {
             uname: $("#uname").val(),
             country: $("#country").val(),
             message: $("#message").val()
           }
-          $.post("/ajaxmessage", data, function(response, status) {
-            $("#ajaxmes").html(response)
-          })
+          // jos kenttiä ei töytä, tulee "alert", joka kehottaa täyttämään kentät
+          if (!data.uname || !data.country || !data.message) {
+            alert("Fill all the fields!");
+            // lähetetään AJAX-olio, joka palauttaa tiedot "ajaxmes"-kenttään
+          } else {
+            $.post("/ajaxmessage", data, function(response, status) {
+              $("#ajaxmes").html(response)
+              // tyhjennetään tekstikentät
+              $(".inputfield").val("")
+            })
+          }
         })
       })
   </script>
